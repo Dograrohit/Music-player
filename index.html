@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+      <div class="music">
+        <!--class = "backgound is used for changing background img according to current song "-->
+        <div class="background">
+          <img src="">
+        </div>
+            <!-- class="player" is the beggining of the main music player -->
+            <div class="player">
+                
+               <div class="nav-btn">
+                  <button class="btn" id="back"><i class="fa-solid fa-arrow-left"></i></button>
+                  <button  class="btn" id="menu"><i class="fa-solid fa-bars"></i></button>
+               </div>
+    
+               <div class="img-theme">
+                <img src="">
+               </div>
+               
+               <div class="title">
+                 <h3>
+                    <h4></h4>
+                 </h3>
+               </div>
+               <!-- audio tag is used for controls the audio in mp3 player -->
+               <audio id="song">
+                    <source src="" type="audio/mp3">
+                </audio>
+                <!-- class = "time is used for counting tke current time of the song " -->
+               <div class="time">
+                  <p id="counter1"></p>
+                  <p id="counter2"></p>
+               </div>
+    
+              <!-- class="bar" is used for style the progress bar in input tag -->
+    
+                <div class="bar">
+                    <input id="progress" type="range" value="0">
+                </div>
+                 
+               <!-- class="controls" is used for set previous, next ana play/pause button  -->
+    
+               <div class="controls">
+                  <button class="btn" id="prev"><i class="fa-solid fa-backward-step"></i></button>
+                  <button class="btn" id="play"><i class="fa-solid fa-play"></i></button>
+                  <button class="btn" id="next"><i class="fa-solid fa-forward-step"></i></button>
+               </div>
+               
+   
+        </div>
+    
+      <!-- know we need to creat a slider playlist -->
+      <div class="slider-playlist">
+        <div class="up-arrow"><i class="fa-solid fa-angle-up"></i></div>
+        <!-- this space is for list items to show in display -->
+          </div>
+      </div>
+
+    </div>
+
+    
+    <script src="app.js"></script>
+    <script src="musiclist.js"></script>
+</body>
+</html>
