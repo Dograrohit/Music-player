@@ -13,7 +13,8 @@ let counter2 = document.getElementById(`counter1`);
 let counter1 = document.getElementById(`counter2`);
 let songname = document.querySelector(`.title h3`);
 let singer = document.querySelector(`.title h4`);
-let icon = document.querySelector(`#play i`)
+let icon = document.querySelector(`#play i`);
+let container = document.querySelector(`body`);
 
 let index = 1;
 let play = true;
@@ -175,3 +176,33 @@ progress.addEventListener ('click',()=>{
     });
 
   }
+
+  container.addEventListener("keypress",(e)=>{
+      if(e.key == " "){
+        songplay();
+      }else if(e.key == "m"){
+        index++;
+        if(index > allmusic.length){
+           index = 1;
+        }else{
+         index = index;
+        }
+        loader(index);
+         song.play();
+         play = false;
+         icon.classList.remove("fa-play");
+         icon.classList.add("fa-pause");
+      }else if(e.key == "n"){
+        index--;
+        if(index <= 0){
+          index = allmusic.length;
+        }else{
+          index = index;
+        }
+        loader(index);
+        song.play();
+        play = false;
+        icon.classList.remove("fa-play");
+        icon.classList.add("fa-pause");
+      }
+  })
